@@ -24,3 +24,8 @@ A Linux Kernel Module (LKM) based network fault injection tool designed to emula
 ### 1. Compile the project
 ```bash
 make
+sudo insmod chaos_driver.ko
+sudo chmod 666 /dev/chaos_emulator
+./chaos_control
+sudo rmmod chaos_driver
+make clean
